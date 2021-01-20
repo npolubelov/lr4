@@ -34,5 +34,5 @@ import sqlite3
 conn = sqlite3.connect('lab3.db')
 c = conn.cursor()
 
-c.execute('SELECT * FROM table1')
-print(c.fetchone())
+for row in c.execute('SELECT * FROM table1 ORDER BY s_price'):
+        print(row)
