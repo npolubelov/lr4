@@ -36,10 +36,12 @@ import sqlite3
 conn = sqlite3.connect('lab3.db')
 c = conn.cursor()
 
+print('\n')
+
 for row in c.execute('SELECT * FROM table1 ORDER BY s_price'):
         print(row)
 
-print('/n')
+print('\n')
 
 c.executemany('INSERT INTO table2 VALUES (?,?,?,?,?)', data_e)
 
