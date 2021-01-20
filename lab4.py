@@ -44,3 +44,6 @@ print('/n')
 c.executemany('INSERT INTO table2 VALUES (?,?,?,?,?)', data_e)
 
 conn.commit()
+
+for row in c.execute("SELECT * FROM table1 WHERE s_objectof='Топливоподающая система'"):
+        print(row)
