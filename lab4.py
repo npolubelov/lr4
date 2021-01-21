@@ -49,3 +49,13 @@ conn.commit()
 
 for row in c.execute("SELECT * FROM table1 WHERE s_objectof='Топливоподающая система'"):
         print(row)
+
+print('\n')
+
+c.execute("SELECT * FROM table1 WHERE s_price='545999'")
+row = c.fetchone() 
+
+exmpl1 = energy(row[0],row[1],row[2],row[3],row[4])
+
+print (exmpl1.ocup())
+print (exmpl1.percentof())
